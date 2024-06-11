@@ -23,30 +23,33 @@ Sticky Notes is a simple web application built with Django that allows users to 
 
 ## 💻 How to Run the Project
 
-# Clone the repository:
+ **Clone the repository:**
    
    git clone https://github.com/Vinypin/sticky_notes.git
 
-# Navigate to the project directory:
+**Navigate to the project directory:**
 cd sticky_notes
 
-# Create a virtual environment (optional, but recommended):
+**Create a virtual environment (optional, but recommended):**
 python -m venv venv
 
-# Activate the virtual environment:
-# On Windows:
+**Activate the virtual environment:**
+**On Windows:**
 venv\Scripts\activate
-# On macOS and Linux:
+**On macOS and Linux:**
 source venv/bin/activate
 
-# Install dependencies:
+**Install dependencies:**
 pip install -r requirements.txt
 
-# Apply database migrations:
+**Apply database migrations:**
 python manage.py migrate
 
-# Run the development server:
+**Run the development server:**
 python manage.py runserver
+
+**Access the application at:** 
+http://localhost:8000 in your browser.
 
 💡 **Technologies**
 - Django
@@ -59,6 +62,4 @@ Vinicyus Da Silva
 
 📄 **License**
 This project is licensed under the MIT License.
-
-#Access the application at http://localhost:8000 in your browser.
 
