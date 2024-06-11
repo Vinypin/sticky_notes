@@ -1,6 +1,5 @@
 # Sticky Notes
 
-![Sticky Notes Logo]
 
 ## 📋 Status
 
@@ -23,7 +22,7 @@ Sticky Notes is a simple web application built with Django that allows users to 
 - **Delete Comments:** Comments can be permanently deleted.
 
 ## 💻 How to Run the Project
-``bash
+
 # Clone the repository:
    
    git clone https://github.com/Vinypin/sticky_notes.git
