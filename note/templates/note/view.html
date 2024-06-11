@@ -1,0 +1,35 @@
+{% extends 'note/base.html' %}
+{% block title %}View Note{% endblock %}
+{% block content %}
+<h1>{{ note.title }}</h1>
+<p><strong>Created at:</strong> {{ note.created_at|date:"F j, Y, g:i a" }}</p>
+<div>{{ note.content }}</div>
+<div class="note-actions">
+    <a href="{% url 'update_note' note.pk %}">
+        <button type="submit" class="button edit">Edit</button>
+    </a>
+    <a href="{% url 'delete_note' note.pk %}" class="button delete">Delete</a>
+    </a>
+</div>
+
+<h2>Coment</h2>
+<ul>
+    {% for post in note.posts.all %}
+    <li>
+        <p>{{ post.content }}</p>
+        <small>{{ post.created_at|date:"F j, Y, g:i a" }}</small>
+        <div class="post-actions">
+            <a href="{% url 'update_post' post.pk %}">
+                <button type="submit" class="button edit">Edit</button>
+            </a>
+            <a href="{% url 'delete_post' post.pk %}"
+            class="button delete">Delete</a>
+            </a>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'create_post' note.pk %}">
+    <button>Add Coment</button>
+</a>
+{% endblock %}

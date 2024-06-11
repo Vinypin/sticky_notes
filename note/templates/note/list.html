@@ -1,0 +1,22 @@
+<!-- note/templates/note/list.html -->
+{% extends 'note/base.html' %}
+{% block title %}Notes List{% endblock %}
+{% block content %}
+<h1>Notes</h1>
+<ul>
+    {% for note in notes %}
+    <li>
+        <div>
+            <a href="{% url 'view_note' note.pk %}"><strong>{{ note.title }}</strong></a><br>
+            <small>{{ note.created_at|date:"F j, Y, g:i a" }}</small><br>
+            {{ note.content|truncatewords:10 }}
+            <p>Number of Comments: {{ note.num_comments }}</p>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+<div class="text-center mt-20">
+    <a href="{% url 'create_note' %}" class="button create-notes">Create Notes</a>
+    </a>
+</div>
+{% endblock %}

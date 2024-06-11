@@ -1,0 +1,10 @@
+{% extends 'note/base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="text-center">
+    <h1>Welcome to Sticky Notes!</h1>
+    <a href="{% url 'list_notes' %}">
+        <button>View Notes</button>
+    </a>
+</div>
+{% endblock %}
